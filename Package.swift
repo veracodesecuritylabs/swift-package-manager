@@ -348,7 +348,7 @@ let relatedDependenciesBranch = "main"
 if ProcessInfo.processInfo.environment["SWIFTPM_LLBUILD_FWK"] == nil {
     if ProcessInfo.processInfo.environment["SWIFTCI_USE_LOCAL_DEPS"] == nil {
         package.dependencies += [
-            .package(url: "https://bitbucket.org/whitehatacademy/swift-llbuild.git", .branch("main")),
+            .package(url: "https://github.com/veracodesecuritylabs/swift-llbuild", .branch("main")),
         ]
     } else {
         // In Swift CI, use a local path to llbuild to interoperate with tools

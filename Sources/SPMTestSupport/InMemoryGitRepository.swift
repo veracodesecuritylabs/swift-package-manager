@@ -201,6 +201,18 @@ public final class InMemoryGitRepository {
     public func fetch() throws {
         // TODO.
     }
+
+    public func isReadable(_ path: AbsolutePath) -> Bool {
+        return true
+    }
+    
+    public func isWritable(_ path: AbsolutePath) -> Bool {
+        return true
+    }
+    
+    public var tempDirectory: AbsolutePath {
+        return AbsolutePath("/tmp")
+    }
 }
 
 extension InMemoryGitRepository: FileSystem {

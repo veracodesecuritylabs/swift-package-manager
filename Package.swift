@@ -343,7 +343,8 @@ let package = Package(
 // this right now.
 
 /// When not using local dependencies, the branch to use for llbuild and TSC repositories.
-let relatedDependenciesBranch = "main"
+//let relatedDependenciesBranch = "main"
+let relatedDependenciesBranch = "swift-DEVELOPMENT-SNAPSHOT-2021-11-02-a"
 
 if ProcessInfo.processInfo.environment["SWIFTPM_LLBUILD_FWK"] == nil {
     if ProcessInfo.processInfo.environment["SWIFTCI_USE_LOCAL_DEPS"] == nil {
@@ -366,7 +367,7 @@ if ProcessInfo.processInfo.environment["SWIFTCI_USE_LOCAL_DEPS"] == nil {
         // The 'swift-argument-parser' version declared here must match that
         // used by 'swift-driver' and 'sourcekit-lsp'. Please coordinate
         // dependency version changes here with those projects.
-        .package(url: "https://github.com/apple/swift-argument-parser.git", .upToNextMinor(from: "1.0.1")),
+        .package(url: "https://github.com/apple/swift-argument-parser.git", .upToNextMinor(from: "0.4.3")),
         .package(url: "https://github.com/apple/swift-driver.git", .branch(relatedDependenciesBranch)),
         .package(url: "https://github.com/apple/swift-crypto.git", .upToNextMinor(from: "1.1.4")),
     ]

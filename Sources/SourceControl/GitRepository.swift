@@ -861,11 +861,11 @@ private class GitFileSystemView: FileSystem {
     }
 
     func isReadable(_ path: AbsolutePath) -> Bool {
-        return true 
+        return true
     }
 
     func isWritable(_ path: AbsolutePath) -> Bool {
-        return true 
+        return true
     }
 
     var tempDirectory: AbsolutePath {

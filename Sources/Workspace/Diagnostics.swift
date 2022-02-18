@@ -176,6 +176,8 @@ extension FileSystemError: CustomStringConvertible {
                 return "unknown system error"
             case .alreadyExistsAtDestination:
                 return "already exists in file system"
+            default:
+                return "unsupported operation"
             }
         }
 
@@ -196,6 +198,8 @@ extension FileSystemError: CustomStringConvertible {
             return "unknown system error while operating on \(path)"
         case .alreadyExistsAtDestination:
             return "\(path) already exists in file system"
+        default:
+            return "unsupported operation"
         }
     }
 }

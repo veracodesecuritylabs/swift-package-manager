@@ -859,6 +859,19 @@ private class GitFileSystemView: FileSystem {
     func move(from sourcePath: AbsolutePath, to destinationPath: AbsolutePath) throws {
         fatalError("will never be supported")
     }
+
+    func isReadable(_ path: AbsolutePath) -> Bool {
+        return true
+    }
+
+    func isWritable(_ path: AbsolutePath) -> Bool {
+        return true
+    }
+
+    var tempDirectory: AbsolutePath {
+        return AbsolutePath("/tmp")
+    }
+
 }
 
 // MARK: - Errors
